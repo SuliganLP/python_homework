@@ -10,16 +10,12 @@ text = "My number is 123-456-789"
 """
 
 text = "My number is 123-456-789"
-res_string = ""
+print(f"Строка: {text}")
 
-for elem in text:
-    if elem.isdigit():
-        res_string += "*"
-    else:
-        res_string += elem
+for elem in "0123456789":
+    text = text.replace(elem, "*")
 
-print(res_string)
-
+print(f"Результат: {text}")
 
 """
 Task №2
@@ -46,14 +42,13 @@ text = "Programming in python"
 Символ ' ' встречается 2 раз(а)
 """
 
-text = "Programming in python"
-used = ""
-
-for elem in text.lower():
-    if text.lower().count(elem) > 1 and elem not in used:
-        print(f"Символ '{elem}' встречается {text.lower().count(elem)} раз(а).")
-        used += elem
-
+# text = "Programming in python"
+# used = ""
+#
+# for elem in text.lower():
+#     if text.lower().count(elem) > 1 and elem not in used:
+#         print(f"Символ '{elem}' встречается {text.lower().count(elem)} раз(а).")
+#         used += elem
 
 """
 Task №3
@@ -66,17 +61,16 @@ text = "I have 5 apples and 10 oranges, price is 0.5 each. Card number is ....36
 I have 50.0 apples and 100.0 oranges, price is 5.0 each. Card number is ....3672.
 """
 
-
-text = "I have 5 apples and 10 oranges, price is 0.5 each. Card number is ....3672."
-new_string = ""
-
-for elem in text.split():
-    if elem.isdigit():
-        new_string += str(float(elem) * 10) + " "
-    elif elem.count(".") == 1 and elem.replace(".", "").isdigit():
-        new_string += str(float(elem) * 10) + " "
-    else:
-        new_string += elem + " "
-
-new_string = new_string.rstrip()
-print(new_string)
+# text = "I have 5 apples and 10 oranges, price is 0.5 each. Card number is ....3672."
+# new_string = ""
+#
+# for elem in text.split():
+#     if elem.isdigit():
+#         new_string += str(float(elem) * 10) + " "
+#     elif elem.count(".") == 1 and elem.replace(".", "").isdigit():
+#         new_string += str(float(elem) * 10) + " "
+#     else:
+#         new_string += elem + " "
+#
+# new_string = new_string.rstrip()
+# print(new_string)
